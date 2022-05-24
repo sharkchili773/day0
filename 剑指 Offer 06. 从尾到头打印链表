@@ -1,0 +1,22 @@
+输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
+
+ 
+
+示例 1：
+
+输入：head = [1,3,2]
+输出：[2,3,1]
+
+
+class Solution:
+
+
+    def reversePrint(self, head: ListNode) -> List[int]:
+        A = []
+        while head:
+            A.append(head.val)
+            head = head.next
+        return A[::-1]
+
+主要难点是理解listnode是什么东西
+只要把listnode搬到list里，然后把list反转就行了
